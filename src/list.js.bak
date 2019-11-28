@@ -1,0 +1,14 @@
+import {lazy} from 'react';
+
+export const routes = [{
+    path: '/',
+    title: '首页',
+    key: 'index',
+    component: lazy(() => import('./views/index/index'))
+},{
+    path: '/list',
+    title: '影评列表',
+    key: 'list',
+    component: lazy(() => import('./views/list/index'))
+}]
+export default routes;

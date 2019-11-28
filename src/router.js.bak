@@ -1,0 +1,29 @@
+import React, {Suspense} from 'react';
+import {HashRouter, Route, Switch} from 'react-router-dom';
+// import Index from "./views/index/index";
+// import List from "./views/list/index";
+import routes from './route'
+const setTitle = (title) => {
+    document.title = title
+};
+
+const BasicRoute = () => (
+    <HashRouter>
+        <Switch>
+            {routes.map(({ path, title, component }, index) => (
+                <Suspense fallback={<div>Loading...</div>}>
+                    <Route
+                        key={index}
+                        exact
+                        path={path}
+                        onEnter={() => setTitle(title)}
+                        component={component}
+                    />
+                </Suspense>
+            ))}
+        </Switch>
+    </HashRouter>
+);
+
+
+export default BasicRoute;
