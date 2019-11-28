@@ -1,6 +1,6 @@
 import React from 'react';
 import {HashRouter, Route, Switch} from 'react-router-dom';
-import routes from './routeconfig.js'
+import routes from './config/route.js'
 const setTitle = (title) => {
     document.title = title
 };
