@@ -45,7 +45,7 @@ class Index extends React.Component {
           </h1>
           <div className="banner" style={{backgroundImage: "url('" + this.state.image + "')"}}>
             <div className="search">
-              <Input id="my-input" onChange={(e) => {
+              <Input id="search-input" onChange={(e) => {
                 this.setState({
                     searchData: e.target.value.toUpperCase(),
                 });
