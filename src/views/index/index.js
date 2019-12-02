@@ -1,6 +1,7 @@
 import React from 'react';
 import Box from '@material-ui/core/Box';
 import TopBar from '../../component/topBar/index';
+import NavBars from '../../component/navBar/index';
 import './index.css';
 
 import banner1 from '../../assets/images/banner-1.jpg';
@@ -15,7 +16,8 @@ let imageList = [
 function Index() {
   return (
     <Box className="Index">
-      <TopBar name="11" imageList={imageList}></TopBar>  
+      <TopBar name="11" imageList={imageList}></TopBar>
+      <NavBars />
     </Box>
   );
 }

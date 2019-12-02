@@ -56,7 +56,7 @@ class Index extends React.Component {
             </div>
             <div className="banner-tab">
               {this.props.imageList.map((v, i) => (
-                <span key={"list-"+i} className="banner-tab-inner" onClick={this.changeBanner.bind(this, i)}>{i}</span>
+                <span key={"list-"+i} className="banner-tab-inner" onClick={() => this.changeBanner(i)}>{i}</span>
               ))}
             </div>
           </div>
