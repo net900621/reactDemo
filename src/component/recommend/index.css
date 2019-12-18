@@ -1,0 +1,19 @@
+.recommend {
+    width: 90%;
+    margin: 0 auto;
+    text-align: left;
+    color: #333;
+}
+.recommend h2 {
+    text-align: center;
+
+}
+.recommend-item {
+    overflow: hidden;
+    margin: 2em 0;
+}
+.recommend-item img {
+    float: left;
+    width: 200px;
+    margin-right: 2em;
+}
