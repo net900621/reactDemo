@@ -26,8 +26,8 @@ const data = [
 
 function Desc (props){
     return (
-        props.desc.map(item => (
-            <p>{item}</p>
+        props.desc.map((item, index) => (
+            <p key={index}>{item}</p>
         ))
     )
 }
@@ -39,10 +39,10 @@ class Recommend extends React.Component {
                 <h2>推荐列表</h2>
                 <div className="recommend-list">
                     {
-                        data.map(item => 
+                        data.map((item, index) => 
                             (
-                                <div className="recommend-item" key={Date.now()}>
-                                    <img src={item.poster} />
+                                <div className="recommend-item" key={index}>
+                                    <img src={item.poster} alt={item.name} />
                                     <h3>{item.name}</h3>
                                     <Desc desc={item.desc} />
                                 </div>
